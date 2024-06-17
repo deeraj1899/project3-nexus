@@ -12,7 +12,7 @@ router.post('/information', async (req, res) => {
   try {
     const newInformation = new Information({ name, email });
     await newInformation.save();
-    res.redirect("/home");
+    res.redirect("/");
   } catch (err) {
     res.status(400).json({ error: 'Failed to submit information', details: err });
   }
@@ -25,7 +25,7 @@ router.post('/feedback', async (req, res) => {
   try {
     const newFeedback = new Feedback({ name, email, feedback });
     await newFeedback.save();
-    res.redirect("/home");
+    res.redirect("/");
   } catch (err) {
     res.status(400).json({ error: 'Failed to submit feedback', details: err });
   }
