@@ -18,8 +18,8 @@ app.use(routes);
 
 
 
-
-mongoose.connect("mongodb+srv://deerajakki09:deeraj999@backend.h9zmv7k.mongodb.net/intern?retryWrites=true&w=majority&appName=backend")
+const mongo_URI="mongodb+srv://deerajakki09:deeraj999@backend.h9zmv7k.mongodb.net/intern?retryWrites=true&w=majority&appName=backend";
+mongoose.connect(mongo_URI)
 .then(()=>{
     console.log("connected to database")
     const PORT = 3000;
